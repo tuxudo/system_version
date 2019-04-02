@@ -1,0 +1,5 @@
+#!/usr/bin/bin
+# This is a sample script
+# It does nothing but echo out that it is running
+
+echo "system_version script is running!"
