@@ -21,9 +21,9 @@ new System_version_model;
 		  <table class="table table-striped table-condensed table-bordered">
 		    <thead>
 		      <tr>
-                <!--   The left section of the <th> tags is for localization and the   -->
-                <!--   right is for the column name in the format of "tablename.columnname"   -->
-                <!--   The first three <th> should always be used   -->
+		      	<!--   The left section of the <th> tags is for localization and the   -->
+		      	<!--   right is for the column name in the format of "tablename.columnname"   -->
+		      	<!--   The first three <th> should always be used   -->
 		      	<th data-i18n="listing.computername" data-colname='machine.computer_name'></th>
 		        <th data-i18n="serial" data-colname='reportdata.serial_number'></th>
 		        <th data-i18n="username" data-colname='reportdata.long_username'></th>
@@ -35,9 +35,9 @@ new System_version_model;
 		    </thead>
 		    <tbody>
 		      <tr>
-                <!--   This <td> shows the "Loading data from server" when first loading the data   -->
-                <!--   the "colspan" should be equal to the amount of columns in the   -->
-                <!--   listing when starting from 1   -->
+		        <!--   This <td> shows the "Loading data from server" when first loading the data   -->
+		        <!--   the "colspan" should be equal to the amount of columns in the   -->
+		        <!--   listing when starting from 1   -->
 		        <td data-i18n="listing.loading" colspan="7" class="dataTables_empty"></td>
 		      </tr>
 		    </tbody>
@@ -79,13 +79,14 @@ new System_version_model;
             buttons: mr.dt.buttons, // Setup the buttons on the listing
 	        createdRow: function( nRow, aData, iDataIndex ) {
 	        	// Update name in first column to link
-                // This should always be included to setup the buttons
+	        	// This should always be included to setup the buttons
 	        	var name=$('td:eq(0)', nRow).html();
 	        	if(name == ''){name = "No Name"};
 	        	var sn=$('td:eq(1)', nRow).html();
-	        	var link = mr.getClientDetailLink(name, sn, '#tab_system_version-tab'); // This should point to the client tab
+ 	        	// This should point to the client tab
+	        	var link = mr.getClientDetailLink(name, sn, '#tab_system_version-tab');
 	        	$('td:eq(0)', nRow).html(link);
-            }
+	        }
 	    });
 	});
 </script>

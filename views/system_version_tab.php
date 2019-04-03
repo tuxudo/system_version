@@ -37,10 +37,10 @@ $(document).on('appReady', function(e, lang) {
 
 	// Get system_version data from the API in the controller and give it the variable "data"
 	$.getJSON( appUrl + '/module/system_version/get_data/' + serialNumber, function( data ) {
-        // Check if we have data in the productbuildversion entry in the returned data
+		// Check if we have data in the productbuildversion entry in the returned data
 		if( ! data.productbuildversion){
-            // If we don't, change the "Loading data from server" message to
-            // a locatization placeholder to show we have no data
+			// If we don't, change the "Loading data from server" message to
+			// a locatization placeholder to show we have no data
 			$('#system_version-msg').text(i18n.t('no_data'));
 		}
 		else{
@@ -57,6 +57,5 @@ $(document).on('appReady', function(e, lang) {
 			$('#system_version-productcopyright').text(data.productcopyright);
 		}
 	});
-	
 });
 </script>

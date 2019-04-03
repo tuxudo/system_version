@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 // The class should be the name of the file with the
-// underscores removed and the charactor after them
+// underscores removed and the character after them
 // made into upper case
 class SystemVersion extends Migration
 {

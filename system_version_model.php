@@ -9,7 +9,7 @@ class System_version_model extends \Model
     public function __construct($serial='')
     {
         // Setup how the database will be setup
-        parent::__construct('id', 'system_version'); // Primary key, tablename
+        parent::__construct('id', 'system_version'); // Primary key, table name
         $this->rs['id'] = 0;
         $this->rs['serial_number'] = $serial;
         $this->rs['productbuildversion'] = "";
@@ -37,7 +37,7 @@ class System_version_model extends \Model
     {        
         // Check if we have data
         if (! $data) {
-            // Send out an error, errors are visable when running 'sudo postflight' on a client Mac
+            // Send out an error, errors are visible when running 'sudo postflight' on a client Mac
             print_r("Error Processing Request: No SystemVersion.plist found!");
         } else {
 
