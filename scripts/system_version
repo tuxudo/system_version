@@ -1,4 +1,4 @@
-#!/usr/bin/bin
+#!/bin/bash
 # This is a sample script
 # It does nothing but echo out that it is running
 
