@@ -61,7 +61,7 @@ new System_version_model;
 		var columnDefs = [],
 		col = 0; // Column counter
 		$('.table th').map(function(){
-	             columnDefs.push({name: $(this).data('colname'), targets: col});
+	             columnDefs.push({name: $(this).data('colname'), targets: col, render: $.fn.dataTable.render.text()});
 	             col++;
 		});
 	    oTable = $('.table').dataTable( {
